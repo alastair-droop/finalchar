@@ -55,7 +55,7 @@ fn main() {
         // Print out the data:
         match args.output_fmt {
             DisplayType::DisplayChar => println!("{}\t{}", from_utf8(&last_char).expect("failed to decode character"), file_path),
-            DisplayType::DisplayHex => println!("{:#X}\t{}", last_char[0], file_path),
+            DisplayType::DisplayHex => println!("0x{:02X}\t{}", last_char[0], file_path),
             DisplayType::DisplayDec => println!("{}\t{}", last_char[0], file_path),
             DisplayType::DisplayNewLine => {
                 let res = match newline_chars.iter().any(|v| v == &last_char[0]) {
