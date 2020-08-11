@@ -1,9 +1,8 @@
 use structopt::StructOpt;
 use std::{str, fs::File};
 use std::io::{Seek, SeekFrom, Read};
-use std::str::from_utf8;
+use std::str::{FromStr, from_utf8};
 use std::convert::Infallible;
-use std::str::{FromStr};
 
 enum DisplayType {
     DisplayNewLine,
